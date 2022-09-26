@@ -25,7 +25,7 @@ if ( ! class_exists('PRIMERA_Profit_Tax_WooCommerce') ) {
 
         public function __construct()
         {
-            $this->include_files();
+            add_action('wp', array($this, 'include_files'));
             add_action('plugins_loaded', array($this, 'load_plugin_textdomain'));
         }
 
@@ -34,7 +34,8 @@ if ( ! class_exists('PRIMERA_Profit_Tax_WooCommerce') ) {
             include('includes/class-product-settings.php');
             include('includes/class-api.php');
             include('includes/class-tax.php');
-            // include('includes/class-prices-with-tax.php');
+            
+            include('includes/class-prices-with-tax.php');
             // include('includes/class-point-price-compatibility.php');
         }
 
