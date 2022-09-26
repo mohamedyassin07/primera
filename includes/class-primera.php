@@ -81,17 +81,9 @@ if ( ! class_exists( 'Primera' ) ) :
 				self::$instance					= new Primera;
 				self::$instance->base_hooks();
 				self::$instance->includes();
-				self::$instance->helpers		= new Primera_Helpers();
-				self::$instance->settings		= new Primera_Settings();
 
 				//Fire the plugin logic
 				new Primera_Run();
-
-				/**
-				 * Fire a custom action to allow dependencies
-				 * after the successful plugin setup
-				 */
-				do_action( 'PRIMERA/plugin_loaded' );
 			}
 
 			return self::$instance;
@@ -105,9 +97,6 @@ if ( ! class_exists( 'Primera' ) ) :
 		 * @return  void
 		 */
 		private function includes() {
-			require_once PRIMERA_PLUGIN_DIR . 'includes/classes/class-primera-helpers.php';
-			require_once PRIMERA_PLUGIN_DIR . 'includes/classes/class-primera-settings.php';
-
 			require_once PRIMERA_PLUGIN_DIR . 'includes/classes/class-primera-run.php';
 		}
 

@@ -49,7 +49,22 @@ class Primera_Run{
 		add_action( 'wp_ajax_my_demo_ajax_call', array( $this, 'my_demo_ajax_call_callback' ), 20 );
 		add_action( 'heartbeat_nopriv_received', array( $this, 'myplugin_receive_heartbeat' ), 20, 2 );
 		add_action( 'heartbeat_received', array( $this, 'myplugin_receive_heartbeat' ), 20, 2 );
-	
+
+
+		$this->include_modules();
+	}
+
+
+	/**
+	 * Include required Modules
+	 *
+	 * @access	public
+	 * @since	1.0.0
+	 */
+	private function include_modules()
+	{
+		require_once PRIMERA_PLUGIN_DIR . 'modules/profit-tax/profit-tax-woocommerce.php';
+		return PRIMERA_Profit_Tax_WooCommerce::instance();
 	}
 
 	/**
@@ -72,7 +87,7 @@ class Primera_Run{
 	*/
 	public function add_plugin_action_link( $links ) {
 
-		$links['our_shop'] = sprintf( '<a href="%s" title="Settings" style="font-weight:700;">%s</a>', 'http://circlepay/wp-admin/admin.php?page=primera', __( 'Settings', 'primera' ) );
+		$links['Settings'] = sprintf( '<a href="%s" title="Settings" style="font-weight:700;">%s</a>', 'http://circlepay/wp-admin/admin.php?page=primera', __( 'Settings', 'primera' ) );
 
 		return $links;
 	}
