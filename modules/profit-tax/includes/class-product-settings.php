@@ -4,9 +4,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!class_exists('PRIMERAPTax_Product_Settings')) {
+if (!class_exists('CWGPTax_Product_Settings')) {
 
-    class PRIMERAPTax_Product_Settings {
+    class CWGPTax_Product_Settings {
 
         public function __construct() {
             //for simple
@@ -60,5 +60,5 @@ if (!class_exists('PRIMERAPTax_Product_Settings')) {
 
     }
 
-    new PRIMERAPTax_Product_Settings();
+    new CWGPTax_Product_Settings();
 }

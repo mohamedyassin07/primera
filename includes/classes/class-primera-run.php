@@ -64,7 +64,6 @@ class Primera_Run{
 	private function include_modules()
 	{
 		require_once PRIMERA_PLUGIN_DIR . 'modules/profit-tax/profit-tax-woocommerce.php';
-		return PRIMERA_Profit_Tax_WooCommerce::instance();
 	}
 
 	/**

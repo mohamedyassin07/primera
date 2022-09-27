@@ -14,7 +14,7 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
             add_filter('alk_profit_tax_raw_price', array($this, 'alter_price_according_to_currency'), 10, 3);
             
             // change taxe value for cart item (if VAT)
-            add_filter('woocommerce_calculate_item_totals_taxes', array($this, 'alter_tax_price'), 20, 3);
+            add_filter('woocommerce_calculate_item_totals_taxes', array($this, 'alter_tax_price'), 999999, 3);
             
             // do_action( 'woocommerce_calculate_totals', $this->cart );
             add_action( 'woocommerce_calculate_totals', array($this, 'check_cart'), 20);
@@ -273,17 +273,19 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
             return $taxes;
         }
         
-        private function custom_calc_tax($price, $rates, $price_includes_tax, $info) {
+        public function custom_calc_tax($price, $rates, $price_includes_tax, $info) {
             if ( $price_includes_tax ) {
                 $taxes = $this->custom_calc_inclusive_tax($price, $rates, $info);
             } else {
                 $taxes = $this->custom_calc_exclusive_tax($price, $rates, $info);
             }
-            
+            // prr( $taxes );
             return $taxes;
         }
         
-        private function custom_calc_inclusive_tax($price, $rates, $info) {
+        public function custom_calc_inclusive_tax($price, $rates, $info) {
+
+            //wp_die('loading , reaload the page ' );
             $taxes          = array();
             $compound_rates = array();
             $regular_rates  = array();
@@ -292,14 +294,15 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
 		// Index array so taxes are output in correct order and see what compound/regular rates we have to calculate.
 		foreach ( $rates as $key => $rate ) {
 			$taxes[ $key ] = 0;
-
+            
 			if ( 'yes' === $rate['compound'] ) {
 				$compound_rates[ $key ] = $rate['rate'];
 			} else {
 				$regular_rates[ $key ] = $rate['rate'];
-                                if($rate['label'] == 'VAT' && $info['custom_tax']){
-                                    $vat_rates[ $key ] = $rate['rate'];
-                                }
+
+                if( $rate['label'] == 'ضرائب' && $info['custom_tax']){
+                    $vat_rates[ $key ] = $rate['rate'];
+                }
 			}
 		}
 
@@ -338,23 +341,26 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
 	}
 
 	
-	    private function custom_calc_exclusive_tax($price, $rates, $info) {
+	    public function custom_calc_exclusive_tax($price, $rates, $info) {
 		$taxes = array();
 
 		if ( ! empty( $rates ) ) {
 			foreach ( $rates as $key => $rate ) {
-				if ( 'yes' === $rate['compound'] ) {
-					continue;
+
+
+				if ( 'yes' !== $rate['compound'] ) {
+					// continue;
 				}
-                                
-                                if($rate['label'] == 'VAT' && $info['custom_tax']){
-                                    $is_coupon = isset($info['coupon']) ? $info['coupon'] : false;
-                                    $is_total_coupon = isset($info['total_coupon']) ? true : false;
-                                    $api = new PRIMERA_Profit_Tax_API($info['product_id'], $info['variation_id'], $info['quantity'], $info['line_total'], $is_coupon, $is_total_coupon);
-                                    $tax_amount = $api->get_tax()*$info['cent'];
-                                }else{
-                                    $tax_amount = $price * ( $rate['rate'] / 100 );
-                                }
+
+                if($rate['label'] == 'ضرائب' && $info['custom_tax']){
+                    $is_coupon = isset($info['coupon']) ? $info['coupon'] : false;
+                    $is_total_coupon = isset($info['total_coupon']) ? true : false;
+                    $api = new PRIMERA_Profit_Tax_API($info['product_id'], $info['variation_id'], $info['quantity'], $info['line_total'], $is_coupon, $is_total_coupon);
+                    $tax_amount = $api->get_tax()*$info['cent'];
+                }else{
+                    $tax_amount = $price * ( $rate['rate'] / 100 );
+                }
+
 				$tax_amount = apply_filters( 'woocommerce_price_ex_tax_amount', $tax_amount, $key, $rate, $price ); // ADVANCED: Allow third parties to modify this rate.
 
 				if ( ! isset( $taxes[ $key ] ) ) {
@@ -363,6 +369,8 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
 					$taxes[ $key ] += $tax_amount;
 				}
 			}
+
+
 
 			$pre_compound_total = array_sum( $taxes );
 
@@ -385,12 +393,15 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
 			}
 		}
 
+
+
 		/**
 		 * Round all taxes to precision (4DP) before passing them back. Note, this is not the same rounding
 		 * as in the cart calculation class which, depending on settings, will round to 2DP when calculating
 		 * final totals. Also unlike that class, this rounds .5 up for all cases.
 		 */
 		$taxes = array_map( array( __CLASS__, 'round' ), $taxes );
+
 
 		return $taxes;
 	}
@@ -399,14 +410,14 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
             return apply_filters( 'woocommerce_tax_round', round( $in, wc_get_rounding_precision() ), $in );
         }
         
-        private function is_custom_tax($product_id, $variable_id) {
+        public function is_custom_tax($product_id, $variable_id) {
             if ($variable_id > 0) {
                 $raw_price = get_post_meta($variable_id, '_cwg_profit_tax_raw_price', true);
             } else {
                 $raw_price = get_post_meta($product_id, '_cwg_profit_tax_raw_price', true);
             }
             
-            return $raw_price ? true : false;
+            return true ;
         }
         
         public function round_line_tax( $value, $in_cents = true ) {
@@ -416,7 +427,7 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
             return $value;
         }
         
-        private function update_coupon_taxes($cart) {
+        public function update_coupon_taxes($cart) {
             $calculate_tax = wc_tax_enabled() && ! $cart->get_customer()->get_is_vat_exempt();
             $coupons = $cart->get_coupons();
             $items = array();

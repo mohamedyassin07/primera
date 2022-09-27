@@ -31,7 +31,8 @@ if (!class_exists('PRIMERA_Profit_Tax_API')) {
         public function get_profit_amount() {
             $profit = 0;
             $get_raw_price = $this->get_raw_price();
-            if ($get_raw_price > 0) {
+            $get_raw_price = $get_raw_price >  0 ? $get_raw_price : 0 ;
+
                 $get_quantity = $this->quantity;
                 $total_raw_cost = $get_raw_price * $get_quantity;
                 $get_line_total = $this->line_total;
@@ -39,8 +40,8 @@ if (!class_exists('PRIMERA_Profit_Tax_API')) {
                 if ($get_line_total > $total_raw_cost) {
                     $profit = $get_line_total - $total_raw_cost;
                 }
-            }
-            return $profit;
+
+                return $profit;
         }
 
         public function get_tax() {

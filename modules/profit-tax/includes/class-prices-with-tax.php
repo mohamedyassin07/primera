@@ -27,21 +27,23 @@ if (!class_exists('PRIMERA_PRICES_WITH_TAX')) {
             add_filter( 'woocommerce_get_variation_prices_hash', array( $this, 'add_price_multiplier_to_variation_prices_hash' ), 99, 3 );
         }
 
-        // Utility function to change the prices with a multiplier (number)
-        public function get_price_multiplier() {
-            return 2; // x2 for testing
+        public function get_price_multiplier($product_id = null, $variation_id = null ) {
+            $api = new PRIMERA_Profit_Tax_API( $product_id, $variation_id, 1, 1);
+            $tax = $api->get_tax();
+            return 1 + $tax;
         }
 
         public function custom_price( $price, $product ) {
-            return (float) $price * $this->get_price_multiplier();
+            return (float) $price * $this->get_price_multiplier( $product->get_id() );
         }
 
         public function custom_variable_price( $price, $variation, $product ) {
-            return (float) $price * $this->get_price_multiplier();
+            echo " this var id  {$variation->get_id()}";
+            return (float) $price * $this->get_price_multiplier( $product->get_id() , $variation->get_id()  );
         }
 
         public function add_price_multiplier_to_variation_prices_hash( $price_hash, $product, $for_display ) {
-            $price_hash[] = $this->get_price_multiplier();
+            $price_hash[] = $this->get_price_multiplier( $product->get_id() );
             return $price_hash;
         }
 
