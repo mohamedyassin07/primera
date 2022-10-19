@@ -50,10 +50,21 @@ class Primera_Run{
 		add_action( 'heartbeat_nopriv_received', array( $this, 'myplugin_receive_heartbeat' ), 20, 2 );
 		add_action( 'heartbeat_received', array( $this, 'myplugin_receive_heartbeat' ), 20, 2 );
 
-
+		$this->includes();
 		$this->include_modules();
 	}
 
+
+	/**
+	 * Includes required Classes
+	 *
+	 * @access	public
+	 * @since	1.0.0
+	 */
+	private function includes()
+	{
+		require_once PRIMERA_PLUGIN_DIR . 'includes/helpers/basics.php';
+	}
 
 	/**
 	 * Include required Modules
