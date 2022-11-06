@@ -41,14 +41,9 @@ class Primera_Run{
 	 * @return	void
 	 */
 	private function add_hooks(){
-	
 		add_action( 'plugin_action_links_' . PRIMERA_PLUGIN_BASE, array( $this, 'add_plugin_action_link' ), 20 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_backend_scripts_and_styles' ), 20 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_scripts_and_styles' ), 20 );
-		add_action( 'wp_ajax_nopriv_my_demo_ajax_call', array( $this, 'my_demo_ajax_call_callback' ), 20 );
-		add_action( 'wp_ajax_my_demo_ajax_call', array( $this, 'my_demo_ajax_call_callback' ), 20 );
-		add_action( 'heartbeat_nopriv_received', array( $this, 'myplugin_receive_heartbeat' ), 20, 2 );
-		add_action( 'heartbeat_received', array( $this, 'myplugin_receive_heartbeat' ), 20, 2 );
 
 		$this->includes();
 		$this->include_modules();
@@ -112,18 +107,12 @@ class Primera_Run{
 	 * @return	void
 	 */
 	public function enqueue_backend_scripts_and_styles() {
-		wp_enqueue_style( 'primera-backend-styles', PRIMERA_PLUGIN_URL . 'includes/assets/css/backend-styles.css', array(), PRIMERA_VERSION, 'all' );
-
-		if( ! wp_script_is( 'heartbeat' ) ){
-			//enqueue the Heartbeat API
-			wp_enqueue_script( 'heartbeat' );
-		}
-
-		wp_enqueue_script( 'primera-backend-scripts', PRIMERA_PLUGIN_URL . 'includes/assets/js/backend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
+		wp_enqueue_style( 'primera-backend-styles', PRIMERA_PLUGIN_URL . 'assets/css/backend-styles.css', array(), PRIMERA_VERSION, 'all' );
+		wp_enqueue_script( 'primera-backend-scripts', PRIMERA_PLUGIN_URL . 'assets/js/backend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
 		wp_localize_script( 'primera-backend-scripts', 'primera', array(
 			'plugin_name'   	=> __( PRIMERA_NAME, 'primera' ),
 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
-			'security_nonce'	=> wp_create_nonce( "your-nonce-name" ),
+			'security_nonce'	=> wp_create_nonce( "primera_ajax_nonce" ),
 		));
 	}
 
@@ -137,77 +126,12 @@ class Primera_Run{
 	 * @return	void
 	 */
 	public function enqueue_frontend_scripts_and_styles() {
-		wp_enqueue_style( 'primera-frontend-styles', PRIMERA_PLUGIN_URL . 'includes/assets/css/frontend-styles.css', array(), PRIMERA_VERSION, 'all' );
-
-		if( ! wp_script_is( 'heartbeat' ) ){
-			//enqueue the Heartbeat API
-			wp_enqueue_script( 'heartbeat' );
-		}
-
-		wp_enqueue_script( 'primera-frontend-scripts', PRIMERA_PLUGIN_URL . 'includes/assets/js/frontend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
+		wp_enqueue_style( 'primera-frontend-styles', PRIMERA_PLUGIN_URL . 'assets/css/frontend-styles.css', array(), PRIMERA_VERSION, 'all' );
+		wp_enqueue_script( 'primera-frontend-scripts', PRIMERA_PLUGIN_URL . 'assets/js/frontend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
 		wp_localize_script( 'primera-frontend-scripts', 'primera', array(
 			'demo_var'   		=> __( 'This is some demo text coming from the backend through a variable within javascript.', 'primera' ),
 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
-			'security_nonce'	=> wp_create_nonce( "your-nonce-name" ),
+			'security_nonce'	=> wp_create_nonce( "primera_ajax_nonce" ),
 		));
 	}
-
-
-	/**
-	 * The callback function for my_demo_ajax_call
-	 *
-	 * @access	public
-	 * @since	1.0.0
-	 *
-	 * @return	void
-	 */
-	public function my_demo_ajax_call_callback() {
-		check_ajax_referer( 'your-nonce-name', 'ajax_nonce_parameter' );
-
-		$demo_data = isset( $_REQUEST['demo_data'] ) ? sanitize_text_field( $_REQUEST['demo_data'] ) : '';
-		$response = array( 'success' => false );
-
-		if ( ! empty( $demo_data ) ) {
-			$response['success'] = true;
-			$response['msg'] = __( 'The value was successfully filled.', 'primera' );
-		} else {
-			$response['msg'] = __( 'The sent value was empty.', 'primera' );
-		}
-
-		if( $response['success'] ){
-			wp_send_json_success( $response );
-		} else {
-			wp_send_json_error( $response );
-		}
-
-		die();
-	}
-
-
-	/**
-	 * The callback function for heartbeat_received
-	 *
-	 * @access	public
-	 * @since	1.0.0
-	 *
-	 * @param	array	$response	Heartbeat response data to pass back to front end.
-	 * @param	array	$data		Data received from the front end (unslashed).
-	 *
-	 * @return	array	$response	The adjusted heartbeat response data
-	 */
-	public function myplugin_receive_heartbeat( $response, $data ) {
-
-		//If we didn't receive our data, don't send any back.
-		if( empty( $data['myplugin_customfield'] ) ){
-			return $response;
-		}
-
-		// Calculate our data and pass it back. For this example, we'll hash it.
-		$received_data = $data['myplugin_customfield'];
-
-		$response['myplugin_customfield_hashed'] = sha1( $received_data );
-
-		return $response;
-	}
-
 }

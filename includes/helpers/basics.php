@@ -11,7 +11,7 @@ function primera_option( $key )
 function primera_duplicated_plugin_notice() {
     ?>
     <div class="notice notice-warning is-dismissible">
-        <p><?php echo PRIMERA_VERSION . ' ' . __('Primera plugin version is allready installed' ,'primera' ) ?></p>
+        <p><?php echo PRIMERA_VERSION . ' ' . __('Primera plugin version is allready installed' ,'primera' ); ?></p>
     </div>
-    <?
+    <?php
 }

@@ -1,3 +1,26 @@
 /*----------------- 
 Backend related CSS
 -----------------*/
+.primera-ajax-resp{
+    width: 90%;
+    margin: 10px;
+}
+
+.primera-ajax-resp-step{
+    background-color: darkgray;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.primera-ajax-resp-step-progress {
+    text-align: right;
+    padding: 7px 0px 7px 0px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.primera-ajax-resp-step-progress span{
+    color: white;
+    font-size: 18px;
+    margin: 5px;
+}
