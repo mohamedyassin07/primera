@@ -70,6 +70,7 @@ class Primera_Run{
 	private function include_modules()
 	{
 		require_once PRIMERA_PLUGIN_DIR . 'modules/profit-tax/profit-tax-woocommerce.php';
+		require_once PRIMERA_PLUGIN_DIR . 'modules/admitad/admitad-woocommerce.php';
 	}
 
 	/**
