@@ -4,13 +4,13 @@
  *
  * @package       PRIMERA
  * @author        Mohamed Yassin
- * @version       1.0.1
+ * @version       1.3.0
  *
  * @wordpress-plugin
  * Plugin Name:   Primera
  * Plugin URI:    https://primera.app/
  * Description:   Primera.app cutom plugin
- * Version:       1.0.1
+ * Version:       1.3.0
  * Author:        Mohamed Yassin
  * Author URI:    https://github.com/mohamedyassin07/
  * Text Domain:   primera
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'PRIMERA_NAME',			'Primera' );
 
 // Plugin version
-define( 'PRIMERA_VERSION',		'1.0.1' );
+define( 'PRIMERA_VERSION',		'1.3.0' );
 
 // Plugin Root File
 define( 'PRIMERA_PLUGIN_FILE',	__FILE__ );

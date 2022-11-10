@@ -71,6 +71,7 @@ class Primera_Run{
 	{
 		require_once PRIMERA_PLUGIN_DIR . 'modules/profit-tax/profit-tax-woocommerce.php';
 		require_once PRIMERA_PLUGIN_DIR . 'modules/admitad/admitad-woocommerce.php';
+		require_once PRIMERA_PLUGIN_DIR . 'modules/coupons_max_val/coupons_max_val.php';
 	}
 
 	/**
