@@ -1,0 +1,538 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Savoy Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-04 10:07+0000\n"
+"PO-Revision-Date: 2020-03-28 08:36+0000\n"
+"Last-Translator: طلب اختباري <abdullah@native.sa>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2;_nx\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: includes/theme-plugins\n"
+"X-Poedit-SearchPathExcluded-2: includes/tgmpa\n"
+"X-Poedit-SearchPathExcluded-3: includes/options\n"
+"X-Poedit-SearchPathExcluded-4: includes/visual-composer/elements\n"
+"X-Poedit-SearchPathExcluded-5: includes/visual-composer/params\n"
+"X-Poedit-SearchPathExcluded-6: includes/woocommerce/admin\n"
+"X-Poedit-SearchPathExcluded-7: includes/visual-composer/elements-config.php\n"
+"X-Poedit-SearchPathExcluded-8: includes/visual-composer/init.php\n"
+"X-Poedit-SearchPathExcluded-9: includes/widgets\n"
+"X-Poedit-SearchPathExcluded-10: woocommerce\n"
+"X-Poedit-SearchPathExcluded-11: header-login.php\n"
+
+#: 404.php:7
+msgid "Page not found."
+msgstr "الصفحة غير موجودة."
+
+#: 404.php:8
+msgid ""
+"It looks like nothing was found at this location. Click the link below to "
+"return home."
+msgstr "هذه الصفحة مفقودة أو تم نقلها. أنقر على الرابط أدناه للعودة للرئيسية."
+
+#: 404.php:9
+msgid "Home"
+msgstr "الرئيسية"
+
+#: 404.php:21
+msgid "Featured products"
+msgstr "المنتجات المميزة"
+
+#: archive.php:11
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "الأرشيف اليومي: %s"
+
+#: archive.php:13
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "الأرشيف الشهري: %s"
+
+#: archive.php:15
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "الأرشيف السنوي: %s"
+
+#: archive.php:17
+msgid "Archives"
+msgstr "الأرشيف"
+
+#: author.php:8
+#, php-format
+msgid "Author Archives: %s"
+msgstr "أرشيف الكاتب: %s"
+
+#: comments.php:18
+#, php-format
+msgctxt "comments title"
+msgid "One reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35
+msgid "Comment navigation"
+msgstr "التنقل في التعليقات"
+
+#: comments.php:36
+msgid "&larr; Older Comments"
+msgstr "&larr; التعليقات الأقدم"
+
+#: comments.php:37
+msgid "Newer Comments &rarr;"
+msgstr "تعليقات جديدة &rarr;"
+
+#: comments.php:42
+msgid "Comments are closed."
+msgstr "التعليقات مغلقة."
+
+#: functions.php:54
+msgid "Color"
+msgstr ""
+
+#: functions.php:55
+msgid "Image"
+msgstr ""
+
+#: functions.php:56
+msgid "Label"
+msgstr ""
+
+#: functions.php:432
+msgid "Please enter a stronger password."
+msgstr ""
+
+#: functions.php:817
+msgid "Top Bar"
+msgstr ""
+
+#: functions.php:818
+msgid "Header Main"
+msgstr ""
+
+#: functions.php:819
+msgid "Header Secondary (Right side)"
+msgstr ""
+
+#: functions.php:820
+msgid "Mobile"
+msgstr ""
+
+#: functions.php:821
+msgid "Footer Bar"
+msgstr ""
+
+#: functions.php:932
+msgid "Categories"
+msgstr "التصنيفات"
+
+#: functions.php:933 includes/translation-strings-dummy.php:59 
+#: includes/woocommerce/woocommerce-template-functions.php:161
+msgid "All"
+msgstr "الكل"
+
+#: functions.php:965
+msgid "Pingback:"
+msgstr "تنبيه :"
+
+#: functions.php:965 functions.php:990
+msgid "Edit"
+msgstr "تعديل"
+
+#: functions.php:977
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s في %2$s"
+
+#: functions.php:982
+msgid "Your comment is awaiting moderation"
+msgstr "تعليقك ينتظر الموافقة عليه"
+
+#: functions.php:1016
+msgid "Page"
+msgstr ""
+
+#: functions.php:1026
+msgid "Blog"
+msgstr ""
+
+#: functions.php:1037 functions.php:1046
+msgid "Shop"
+msgstr "المتجر"
+
+#: functions.php:1057
+msgid "Footer"
+msgstr "الفوتر"
+
+#: functions.php:1067
+msgid "\"Widgetised Sidebar\" Element"
+msgstr ""
+
+#: includes/custom-styles.php:1274
+msgid "Out of stock"
+msgstr "غير متوفر"
+
+#: includes/custom-styles.php:1275
+msgid "Required field."
+msgstr "خانة مطلوبة."
+
+#: includes/translation-strings-dummy.php:7
+msgid "Shopping Cart"
+msgstr "سلة التسوق"
+
+#: includes/translation-strings-dummy.php:8
+msgid "Enter coupon"
+msgstr "أدخل رمز قسيمة الخصم"
+
+#: includes/translation-strings-dummy.php:11
+msgid "Payment"
+msgstr "الدفع"
+
+#: includes/translation-strings-dummy.php:14
+msgid "Updating&hellip;"
+msgstr "جاري التحديث&hellip;"
+
+#: includes/translation-strings-dummy.php:17 pagination.php:8
+msgid "Load More"
+msgstr "تحميل المزيد"
+
+#: includes/translation-strings-dummy.php:18
+msgid "All products loaded."
+msgstr "تم تحميل جميع المنتجات."
+
+#: includes/translation-strings-dummy.php:21
+msgid "Or"
+msgstr "أو"
+
+#: includes/translation-strings-dummy.php:22
+msgid "Create an account"
+msgstr "إنشاء حساب جديد"
+
+#: includes/translation-strings-dummy.php:25
+msgid "Order Tracking"
+msgstr "تتبع الطلب"
+
+#: includes/translation-strings-dummy.php:28
+msgid "Details"
+msgstr "تفاصيل المنتج"
+
+#: includes/translation-strings-dummy.php:31 
+#: includes/woocommerce/woocommerce-functions.php:228
+msgid "Share on Facebook"
+msgstr "المشاركة على فيس بوك"
+
+#: includes/translation-strings-dummy.php:32
+msgid "Share on Twitter"
+msgstr "المشاركة على تويتر"
+
+#: includes/translation-strings-dummy.php:33
+msgid "Pin on Pinterest"
+msgstr "المشاركة على Pinterest"
+
+#: includes/translation-strings-dummy.php:36
+msgid "Watch Video"
+msgstr "مشاهدة الفيديو"
+
+#: includes/translation-strings-dummy.php:39 
+#: template-parts/woocommerce/searchform.php:26 
+#: template-parts/woocommerce/searchform.php:34
+#, php-format
+msgid "press %sEnter%s to search"
+msgstr "أنقر زر %sإدخال%s على لوحة مفاتيحك للبحث"
+
+#: includes/translation-strings-dummy.php:42
+msgctxt "breadcrumb"
+msgid "Shop"
+msgstr "الرئيسية"
+
+#: includes/translation-strings-dummy.php:45
+#, php-format
+msgid "Filters active %s(%s)%s"
+msgstr "المنتجات المتوافقة %s(%s)%s"
+
+#: includes/translation-strings-dummy.php:46
+#, php-format
+msgid "Search results for %s&ldquo;%s&rdquo;%s"
+msgstr "نتائج البحث عن %s&ldquo;%s&rdquo;%s"
+
+#: includes/translation-strings-dummy.php:47
+#, php-format
+msgid "Showing %s&ldquo;%s&rdquo;%s"
+msgstr "المنتجات المعروضة %s&ldquo;%s&rdquo;%s"
+
+#: includes/translation-strings-dummy.php:48
+#, php-format
+msgid "Products tagged %s&ldquo;%s&rdquo;%s"
+msgstr "المنتجات ذات الوسم %s&ldquo;%s&rdquo;%s"
+
+#: includes/translation-strings-dummy.php:51
+msgid "Filter Products"
+msgstr "تصفية المنتجات"
+
+#: includes/translation-strings-dummy.php:52
+msgid "Reset Filters"
+msgstr "اعادة تعيين المرشحات"
+
+#: includes/translation-strings-dummy.php:55
+msgid "Show more"
+msgstr "شراء"
+
+#: includes/translation-strings-dummy.php:62
+msgid "Sort By"
+msgstr "ترتيب حسب"
+
+#: includes/translation-strings-dummy.php:64
+msgid "Default"
+msgstr "الإفتراضي"
+
+#: includes/translation-strings-dummy.php:65
+msgid "Popularity"
+msgstr "الأكثر تميزًا"
+
+#: includes/translation-strings-dummy.php:66
+msgid "Average rating"
+msgstr "متوسط التقييم"
+
+#: includes/translation-strings-dummy.php:67
+msgid "Newness"
+msgstr "الأحدث"
+
+#: includes/translation-strings-dummy.php:68
+msgid "Price: Low to High"
+msgstr "السعر: الأقل - الأعلى"
+
+#: includes/translation-strings-dummy.php:69
+msgid "Price: High to Low"
+msgstr "السعر: الأعلى - الأقل"
+
+#: includes/translation-strings-dummy.php:73
+msgid "More &nbsp;&rarr;"
+msgstr "المزيد More &nbsp;&larr;"
+
+#: includes/translation-strings-dummy.php:77
+msgid " and tagged "
+msgstr " تحت الوسوم "
+
+#: includes/translation-strings-dummy.php:78
+msgid "Tagged "
+msgstr "الكلمات الدلالية "
+
+#: includes/translation-strings-dummy.php:79
+msgid "&larr;&nbsp; Newer"
+msgstr "&rarr;&nbsp; أجدد"
+
+#: includes/translation-strings-dummy.php:80
+msgid "Older &nbsp;&rarr;"
+msgstr "أقدم  &nbsp;&larr;"
+
+#: includes/translation-strings-dummy.php:84
+msgid "Oops, page not found."
+msgstr "عذرًا، الصفحة غير موجودة."
+
+#: includes/translation-strings-dummy.php:85
+msgid "Homepage &nbsp;&nbsp;&rarr;"
+msgstr "الصفحة الرئيسية &nbsp;&nbsp;&larr;"
+
+#: includes/visual-composer/deprecated/shortcodes/button.php:6
+msgid "Button with Text"
+msgstr ""
+
+#: includes/visual-composer/deprecated/shortcodes/woocommerce/product-search.php:14
+msgid "Search store"
+msgstr "البحث في المتجر"
+
+#: includes/visual-composer/element-templates/vc_toggle.php:6
+msgid "Click to toggle"
+msgstr "انقر للتبديل"
+
+#: includes/visual-composer/page-templates.php:44
+msgid "About"
+msgstr "حول"
+
+#: includes/visual-composer/page-templates.php:51
+msgid "Contact"
+msgstr "اتصال"
+
+#: includes/visual-composer/page-templates.php:58
+msgid "FAQ"
+msgstr "التعليمات"
+
+#: includes/woocommerce/woocommerce-functions.php:181
+#, php-format
+msgid "%s products"
+msgstr "‫%s منتجات"
+
+#: includes/woocommerce/woocommerce-functions.php:229
+msgid "Tweet"
+msgstr ""
+
+#: includes/woocommerce/woocommerce-functions.php:230
+msgid "Pin it"
+msgstr ""
+
+#: includes/woocommerce/woocommerce-functions.php:231
+msgid "Download image"
+msgstr ""
+
+#: includes/woocommerce/woocommerce-functions.php:453
+msgid "Please fill in the required fields"
+msgstr "فضلًا قم بتعبئة الخانات المطلوبة"
+
+#: includes/woocommerce/woocommerce-template-functions.php:34
+msgid "My account"
+msgstr "حسابي"
+
+#: includes/woocommerce/woocommerce-template-functions.php:34
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: includes/woocommerce/woocommerce-template-functions.php:51 
+#: template-parts/woocommerce/cart-panel.php:6
+msgid "Cart"
+msgstr "السلة"
+
+#: includes/woocommerce/woocommerce-template-functions.php:230
+msgid "Back"
+msgstr "رجوع"
+
+#: page.php:18 templates/page-sidebar.php:29
+msgid "Sorry, nothing to display."
+msgstr "عفوا لايوجد شيئ ليعرض."
+
+#: pagination.php:12
+msgid "Older Posts"
+msgstr "المقالات القديمة"
+
+#: pagination.php:13
+msgid "Newer Posts"
+msgstr "المقالات الجديدة"
+
+#: search.php:8
+#, php-format
+msgid "%s Search Results for: %s"
+msgstr "%s نتائج البحث عن: %s"
+
+#: searchform.php:2
+msgid "Search .."
+msgstr "البحث .."
+
+#: single.php:39
+msgid "By"
+msgstr "بواسطة"
+
+#: single.php:39
+msgid "on"
+msgstr "في"
+
+#: single.php:49 template-parts/blog/content-classic.php:38 
+#: template-parts/blog/content-grid.php:43 
+#: template-parts/blog/content-list.php:41
+msgid "Pages:"
+msgstr "الصفحات:"
+
+#: single.php:71
+msgid "Posted in "
+msgstr "نشر في "
+
+#: single.php:93
+msgid "Previous"
+msgstr "السابق"
+
+#: single.php:97
+msgid "Next"
+msgstr "التالي"
+
+#: single.php:152
+msgid "Related Posts"
+msgstr "مقالات ذات صلة"
+
+#: tag.php:8
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "أرشيف الوسم: %s"
+
+#: template-parts/blog/content-classic.php:47
+msgid "Leave a comment"
+msgstr "إضافة تعليق"
+
+#: template-parts/blog/content-classic.php:47
+msgid "1 comment"
+msgstr "1 تعليق"
+
+#: template-parts/blog/content-classic.php:47
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: template-parts/blog/content-grid.php:53
+msgid "More"
+msgstr "المزيد"
+
+#: template-parts/blog/content-none.php:4
+#, php-format
+msgid "Ready to publish your first post? %sGet started here%s."
+msgstr "مستعد لنشر أول تدوينة؟ %sإبدأ هنا%s."
+
+#: template-parts/blog/content-none.php:8
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"عذرا، ولكن لا شيء يطابق عبارات البحث. أرجو المحاولة مرة أخرى بإستخدام كلمات "
+"أخرى."
+
+#: template-parts/blog/content-none.php:12
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+"يبدو أننا يمكن can&rsquo;t العثور على ما  you&rsquo;re  إعادة ما تبحث عنه."
+
+#: template-parts/navigation/navigation-mobile.php:22 
+#: template-parts/woocommerce/searchform.php:9
+msgid "Search products"
+msgstr "ابحث عن المنتجات والفئات بشكل فوري"
+
+#: template-parts/woocommerce/cart-panel.php:7
+msgid "Close"
+msgstr "إغلاق"
+
+#: template-parts/woocommerce/searchform.php:27
+msgid "Showing all results"
+msgstr "عرض جميع النتائج"
+
+#: template-parts/woocommerce/searchform.php:28
+msgid "No products found."
+msgstr "لم يتم العثور على منتجات."
+
+#. Theme Name of the plugin/theme
+msgid "Savoy"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid ""
+"http://themeforest.net/item/savoy-minimalist-ajax-woocommerce-theme/12537825"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Savoy - Modern AJAX enabled WooCommerce theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "NordicMade"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.nordicmade.com"
+msgstr ""

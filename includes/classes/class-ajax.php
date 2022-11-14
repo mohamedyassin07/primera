@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * 
  * 
  * HOW TO USE ??
- * <?php require_once PRIMERA_PLUGIN_DIR . 'includes/classes/class-ajax.php'; ?>
+ * <?php require_once PRIMERA_THEME_DIR . 'includes/classes/class-ajax.php'; ?>
  * <form id='{action_name}_form'>
  *      do your normal field/s here,  all of them will be send throug the ajax request automatically
  *      <?php Primera_ِAjax::render( '{action_name}' ); ?> it will create submit btn and response div

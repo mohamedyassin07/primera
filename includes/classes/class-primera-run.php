@@ -41,7 +41,6 @@ class Primera_Run{
 	 * @return	void
 	 */
 	private function add_hooks(){
-		add_action( 'plugin_action_links_' . PRIMERA_PLUGIN_BASE, array( $this, 'add_plugin_action_link' ), 20 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_backend_scripts_and_styles' ), 20 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_scripts_and_styles' ), 20 );
 
@@ -58,7 +57,7 @@ class Primera_Run{
 	 */
 	private function includes()
 	{
-		require_once PRIMERA_PLUGIN_DIR . 'includes/helpers/basics.php';
+		require_once PRIMERA_THEME_DIR . 'includes/helpers/basics.php';
 	}
 
 	/**
@@ -69,9 +68,9 @@ class Primera_Run{
 	 */
 	private function include_modules()
 	{
-		require_once PRIMERA_PLUGIN_DIR . 'modules/profit-tax/profit-tax-woocommerce.php';
-		require_once PRIMERA_PLUGIN_DIR . 'modules/admitad/admitad-woocommerce.php';
-		require_once PRIMERA_PLUGIN_DIR . 'modules/coupons_max_val/coupons_max_val.php';
+		require_once PRIMERA_THEME_DIR . 'includes/modules/profit-tax/profit-tax-woocommerce.php';
+		require_once PRIMERA_THEME_DIR . 'includes/modules/admitad/admitad-woocommerce.php';
+		require_once PRIMERA_THEME_DIR . 'includes/modules/coupons_max_val/coupons_max_val.php';
 	}
 
 	/**
@@ -109,8 +108,8 @@ class Primera_Run{
 	 * @return	void
 	 */
 	public function enqueue_backend_scripts_and_styles() {
-		wp_enqueue_style( 'primera-backend-styles', PRIMERA_PLUGIN_URL . 'assets/css/backend-styles.css', array(), PRIMERA_VERSION, 'all' );
-		wp_enqueue_script( 'primera-backend-scripts', PRIMERA_PLUGIN_URL . 'assets/js/backend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
+		wp_enqueue_style( 'primera-backend-styles', PRIMERA_THEME_URL . 'assets/css/backend-styles.css', array(), PRIMERA_VERSION, 'all' );
+		wp_enqueue_script( 'primera-backend-scripts', PRIMERA_THEME_URL . 'assets/js/backend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
 		wp_localize_script( 'primera-backend-scripts', 'primera', array(
 			'plugin_name'   	=> __( PRIMERA_NAME, 'primera' ),
 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
@@ -128,8 +127,8 @@ class Primera_Run{
 	 * @return	void
 	 */
 	public function enqueue_frontend_scripts_and_styles() {
-		wp_enqueue_style( 'primera-frontend-styles', PRIMERA_PLUGIN_URL . 'assets/css/frontend-styles.css', array(), PRIMERA_VERSION, 'all' );
-		wp_enqueue_script( 'primera-frontend-scripts', PRIMERA_PLUGIN_URL . 'assets/js/frontend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
+		wp_enqueue_style( 'primera-frontend-styles', PRIMERA_THEME_URL . 'assets/css/frontend-styles.css', array(), PRIMERA_VERSION, 'all' );
+		wp_enqueue_script( 'primera-frontend-scripts', PRIMERA_THEME_URL . 'assets/js/frontend-scripts.js', array( 'jquery' ), PRIMERA_VERSION, true );
 		wp_localize_script( 'primera-frontend-scripts', 'primera', array(
 			'demo_var'   		=> __( 'This is some demo text coming from the backend through a variable within javascript.', 'primera' ),
 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),

@@ -1,0 +1,38 @@
+#nm-header,
+#nm-header-placeholder,
+#nm-footer,
+#nm-top-bar,
+.csh-header-main,
+.csh-footer-copyright,
+/*.products li.post-25,
+.products li.post-1291,
+.products li.post-131,
+.products li.post-33,
+.products li.post-177,
+.return-to-shop .button,*/
+.nm-single-product-top,
+#heba_button,
+.product_meta {
+  display: none !important;
+}
+
+.woocommerce-cart .payments-icons {
+    display: block !important;
+}
+
+/*body .crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-kquevr *,
+body .crisp-client .crisp-1rjpbb7[data-last-operator-face=false] .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 .crisp-16qgsyi .crisp-101bp3x[data-is-ongoing=false] {
+	visibility:hidden !important;
+	display: none !important;	
+}*/
+
+body {
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.card-style {
+	user-select: auto !important;
+	-webkit-user-select: auto !important;
+}

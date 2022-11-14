@@ -97,7 +97,8 @@ if ( ! class_exists( 'Primera' ) ) :
 		 * @return  void
 		 */
 		private function includes() {
-			require_once PRIMERA_PLUGIN_DIR . 'includes/classes/class-primera-run.php';
+			require_once PRIMERA_THEME_DIR . 'includes/functions/general.php';
+			require_once PRIMERA_THEME_DIR . 'includes/classes/class-primera-run.php';
 		}
 
 		/**
@@ -108,7 +109,7 @@ if ( ! class_exists( 'Primera' ) ) :
 		 * @return  void
 		 */
 		private function base_hooks() {
-			add_action( 'plugins_loaded', array( self::$instance, 'load_textdomain' ) );
+			// add_action( 'plugins_loaded', array( self::$instance, 'load_textdomain' ) );
 		}
 
 		/**
@@ -119,7 +120,7 @@ if ( ! class_exists( 'Primera' ) ) :
 		 * @return  void
 		 */
 		public function load_textdomain() {
-			load_plugin_textdomain( 'primera', FALSE, dirname( plugin_basename( PRIMERA_PLUGIN_FILE ) ) . '/languages/' );
+			// load_plugin_textdomain( 'primera', FALSE, dirname( plugin_basename( PRIMERA_THEME_FILE ) ) . '/languages/' );
 		}
 
 	}

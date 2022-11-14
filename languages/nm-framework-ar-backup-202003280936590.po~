@@ -1,0 +1,1224 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Savoy Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-28 09:33+0000\n"
+"PO-Revision-Date: 2020-03-28 09:34+0000\n"
+"Last-Translator: طلب اختباري <abdullah@native.sa>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2;_nx\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: includes/theme-plugins\n"
+"X-Poedit-SearchPathExcluded-2: includes/tgmpa\n"
+"X-Poedit-SearchPathExcluded-3: includes/options\n"
+"X-Poedit-SearchPathExcluded-4: includes/visual-composer/elements\n"
+"X-Poedit-SearchPathExcluded-5: includes/visual-composer/params\n"
+"X-Poedit-SearchPathExcluded-6: includes/woocommerce/admin\n"
+"X-Poedit-SearchPathExcluded-7: includes/visual-composer/elements-config.php\n"
+"X-Poedit-SearchPathExcluded-8: includes/visual-composer/init.php\n"
+"X-Poedit-SearchPathExcluded-9: includes/widgets\n"
+"X-Poedit-SearchPathExcluded-10: woocommerce\n"
+"X-Poedit-SearchPathExcluded-11: header-login.php\n"
+
+#: ../savoy/author.php:8
+#, php-format
+msgid "Author Archives: %s"
+msgstr "أرشيف الكاتب: %s"
+
+#: ../savoy/tag.php:8
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "أرشيف الوسم: %s"
+
+#: ../savoy/page.php:18 ../savoy/templates/page-sidebar.php:29
+msgid "Sorry, nothing to display."
+msgstr "عفوا لايوجد شيئ ليعرض."
+
+#: ../savoy/archive.php:11
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "الأرشيف اليومي: %s"
+
+#: ../savoy/archive.php:13
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "الأرشيف الشهري: %s"
+
+#: ../savoy/archive.php:15
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "الأرشيف السنوي: %s"
+
+#: ../savoy/archive.php:17
+msgid "Archives"
+msgstr "الأرشيف"
+
+#: ../savoy/404.php:7
+msgid "Page not found."
+msgstr "الصفحة غير موجودة."
+
+#: ../savoy/404.php:8
+msgid ""
+"It looks like nothing was found at this location. Click the link below to "
+"return home."
+msgstr "هذه الصفحة مفقودة أو تم نقلها. أنقر على الرابط أدناه للعودة للرئيسية."
+
+#: ../savoy/404.php:9
+msgid "Home"
+msgstr "الرئيسية"
+
+#: ../savoy/single.php:39
+msgid "By"
+msgstr "بواسطة"
+
+#: ../savoy/single.php:39
+msgid "on"
+msgstr "في"
+
+#: ../savoy/single.php:49 ../savoy/template-parts/blog/content-list.php:41
+#: ../savoy/template-parts/blog/content-grid.php:43
+#: ../savoy/template-parts/blog/content-classic.php:38
+msgid "Pages:"
+msgstr "الصفحات:"
+
+#: ../savoy/single.php:71
+msgid "Posted in "
+msgstr "نشر في "
+
+#: ../savoy/single.php:93
+msgid "Previous"
+msgstr "السابق"
+
+#: ../savoy/single.php:97
+msgid "Next"
+msgstr "التالي"
+
+#: ../savoy/single.php:152
+msgid "Related Posts"
+msgstr "مقالات ذات صلة"
+
+#: ../savoy/comments.php:18
+#, php-format
+msgctxt "comments title"
+msgid "One reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../savoy/comments.php:35
+msgid "Comment navigation"
+msgstr "التنقل في التعليقات"
+
+#: ../savoy/comments.php:36
+msgid "&larr; Older Comments"
+msgstr "&larr; التعليقات الأقدم"
+
+#: ../savoy/comments.php:37
+msgid "Newer Comments &rarr;"
+msgstr "تعليقات جديدة &rarr;"
+
+#: ../savoy/comments.php:42
+msgid "Comments are closed."
+msgstr "التعليقات مغلقة."
+
+#: ../savoy/functions.php:777
+msgid "Top Bar"
+msgstr ""
+
+#: ../savoy/functions.php:778
+msgid "Header Main"
+msgstr ""
+
+#: ../savoy/functions.php:779
+msgid "Header Secondary (Right side)"
+msgstr ""
+
+#: ../savoy/functions.php:781
+msgid "Footer Bar"
+msgstr ""
+
+#: ../savoy/functions.php:892
+msgid "Categories"
+msgstr "التصنيفات"
+
+#: ../savoy/functions.php:893
+#: ../savoy/includes/translation-strings-dummy.php:59
+#: ../savoy/includes/woocommerce/woocommerce-template-functions.php:171
+msgid "All"
+msgstr "الكل"
+
+#: ../savoy/functions.php:925
+msgid "Pingback:"
+msgstr "تنبيه :"
+
+#: ../savoy/functions.php:925 ../savoy/functions.php:950
+msgid "Edit"
+msgstr "تعديل"
+
+#: ../savoy/functions.php:937
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s في %2$s"
+
+#: ../savoy/functions.php:942
+msgid "Your comment is awaiting moderation"
+msgstr "تعليقك ينتظر الموافقة عليه"
+
+#: ../savoy/functions.php:976
+msgid "Page"
+msgstr ""
+
+#: ../savoy/functions.php:986
+msgid "Blog"
+msgstr ""
+
+#: ../savoy/functions.php:997 ../savoy/functions.php:1006
+msgid "Shop"
+msgstr "المتجر"
+
+#: ../savoy/functions.php:1017
+msgid "Footer"
+msgstr "الفوتر"
+
+#: ../savoy/functions.php:1027
+msgid "\"Widgetised Sidebar\" Element"
+msgstr ""
+
+#: ../savoy/pagination.php:8 ../savoy/includes/translation-strings-dummy.php:17
+#: ../savoy/woocommerce/loop/pagination.php:69
+msgid "Load More"
+msgstr "تحميل المزيد"
+
+#: ../savoy/pagination.php:12
+msgid "Older Posts"
+msgstr "المقالات القديمة"
+
+#: ../savoy/pagination.php:13
+msgid "Newer Posts"
+msgstr "المقالات الجديدة"
+
+#: ../savoy/search.php:8
+#, php-format
+msgid "%s Search Results for: %s"
+msgstr "%s نتائج البحث عن: %s"
+
+#: ../savoy/searchform.php:2
+msgid "Search .."
+msgstr "البحث .."
+
+#: ../savoy/woocommerce/content-product_nm_filters_popup.php:11
+#: ../savoy/includes/translation-strings-dummy.php:51
+msgid "Filter Products"
+msgstr "تصفية المنتجات"
+
+#: ../savoy/woocommerce/content-product_nm_filters_popup.php:26
+#: ../savoy/woocommerce/product-searchform_nm.php:13
+#: ../savoy/includes/translation-strings-dummy.php:39
+#: ../savoy/template-parts/woocommerce/searchform.php:26
+#: ../savoy/template-parts/woocommerce/searchform.php:34
+#, php-format
+msgid "press %sEnter%s to search"
+msgstr "أنقر زر %sإدخال%s على لوحة مفاتيحك للبحث"
+
+#: ../savoy/woocommerce/content-product_nm_filters_popup.php:41
+#: ../savoy/includes/translation-strings-dummy.php:52
+msgid "Reset Filters"
+msgstr "اعادة تعيين المرشحات"
+
+#: ../savoy/woocommerce/content-product.php:134
+#: ../savoy/includes/translation-strings-dummy.php:55
+msgid "Show more"
+msgstr "شراء"
+
+#: ../savoy/woocommerce/content-product_nm_results_bar.php:30
+#: ../savoy/includes/translation-strings-dummy.php:45
+#, php-format
+msgid "Filters active %s(%s)%s"
+msgstr "المنتجات المتوافقة %s(%s)%s"
+
+#: ../savoy/woocommerce/content-product_nm_results_bar.php:40
+#: ../savoy/includes/translation-strings-dummy.php:46
+#, php-format
+msgid "Search results for %s&ldquo;%s&rdquo;%s"
+msgstr "نتائج البحث عن %s&ldquo;%s&rdquo;%s"
+
+#: ../savoy/woocommerce/content-product_nm_results_bar.php:53
+#: ../savoy/includes/translation-strings-dummy.php:47
+#, php-format
+msgid "Showing %s&ldquo;%s&rdquo;%s"
+msgstr "المنتجات المعروضة %s&ldquo;%s&rdquo;%s"
+
+#: ../savoy/woocommerce/content-product_nm_results_bar.php:56
+#: ../savoy/includes/translation-strings-dummy.php:48
+#, php-format
+msgid "Products tagged %s&ldquo;%s&rdquo;%s"
+msgstr "المنتجات ذات الوسم %s&ldquo;%s&rdquo;%s"
+
+#: ../savoy/includes/translation-strings-dummy.php:7
+#: ../savoy/woocommerce/cart/cart.php:34
+msgid "Shopping Cart"
+msgstr "سلة التسوق"
+
+#: ../savoy/includes/translation-strings-dummy.php:8
+#: ../savoy/woocommerce/cart/cart.php:178
+msgid "Enter coupon"
+msgstr "أدخل رمز قسيمة الخصم"
+
+#: ../savoy/includes/translation-strings-dummy.php:11
+msgid "Payment"
+msgstr "الدفع"
+
+#: ../savoy/includes/translation-strings-dummy.php:14
+#: ../savoy/woocommerce/cart/mini-cart.php:39
+msgid "Updating&hellip;"
+msgstr "جاري التحديث&hellip;"
+
+#: ../savoy/includes/translation-strings-dummy.php:18
+#: ../savoy/woocommerce/loop/pagination.php:71
+msgid "All products loaded."
+msgstr "تم تحميل جميع المنتجات."
+
+#: ../savoy/includes/translation-strings-dummy.php:21
+#: ../savoy/woocommerce/myaccount/form-login.php:77
+#: ../savoy/woocommerce/myaccount/form-login.php:133
+msgid "Or"
+msgstr "أو"
+
+#: ../savoy/includes/translation-strings-dummy.php:22
+#: ../savoy/woocommerce/myaccount/form-login.php:79
+msgid "Create an account"
+msgstr "إنشاء حساب جديد"
+
+#: ../savoy/includes/translation-strings-dummy.php:25
+#: ../savoy/woocommerce/order/form-tracking.php:31
+msgid "Order Tracking"
+msgstr "تتبع الطلب"
+
+#: ../savoy/includes/translation-strings-dummy.php:28
+#: ../savoy/woocommerce/quickview/content-quickview.php:34
+msgid "Details"
+msgstr "تفاصيل المنتج"
+
+#: ../savoy/includes/translation-strings-dummy.php:31
+#: ../savoy/woocommerce/single-product/share.php:33
+#: ../savoy/includes/woocommerce/woocommerce-functions.php:228
+msgid "Share on Facebook"
+msgstr "المشاركة على فيس بوك"
+
+#: ../savoy/includes/translation-strings-dummy.php:32
+#: ../savoy/woocommerce/single-product/share.php:34
+msgid "Share on Twitter"
+msgstr "المشاركة على تويتر"
+
+#: ../savoy/includes/translation-strings-dummy.php:33
+#: ../savoy/woocommerce/single-product/share.php:35
+msgid "Pin on Pinterest"
+msgstr "المشاركة على Pinterest"
+
+#: ../savoy/includes/translation-strings-dummy.php:36
+#: ../savoy/woocommerce/single-product/product-image.php:91
+msgid "Watch Video"
+msgstr "مشاهدة الفيديو"
+
+#: ../savoy/includes/translation-strings-dummy.php:42
+#: ../savoy/woocommerce/single-product/breadcrumb_nm.php:26
+msgctxt "breadcrumb"
+msgid "Shop"
+msgstr "الرئيسية"
+
+#: ../savoy/includes/translation-strings-dummy.php:62
+msgid "Sort By"
+msgstr "ترتيب حسب"
+
+#: ../savoy/includes/translation-strings-dummy.php:64
+msgid "Default"
+msgstr "الإفتراضي"
+
+#: ../savoy/includes/translation-strings-dummy.php:65
+msgid "Popularity"
+msgstr "الأكثر تميزًا"
+
+#: ../savoy/includes/translation-strings-dummy.php:66
+msgid "Average rating"
+msgstr "متوسط التقييم"
+
+#: ../savoy/includes/translation-strings-dummy.php:67
+msgid "Newness"
+msgstr "الأحدث"
+
+#: ../savoy/includes/translation-strings-dummy.php:68
+msgid "Price: Low to High"
+msgstr "السعر: الأقل - الأعلى"
+
+#: ../savoy/includes/translation-strings-dummy.php:69
+msgid "Price: High to Low"
+msgstr "السعر: الأعلى - الأقل"
+
+#: ../savoy/includes/translation-strings-dummy.php:73
+msgid "More &nbsp;&rarr;"
+msgstr "المزيد More &nbsp;&larr;"
+
+#: ../savoy/includes/translation-strings-dummy.php:77
+msgid " and tagged "
+msgstr " تحت الوسوم "
+
+#: ../savoy/includes/translation-strings-dummy.php:78
+msgid "Tagged "
+msgstr "الكلمات الدلالية "
+
+#: ../savoy/includes/translation-strings-dummy.php:79
+msgid "&larr;&nbsp; Newer"
+msgstr "&rarr;&nbsp; أجدد"
+
+#: ../savoy/includes/translation-strings-dummy.php:80
+msgid "Older &nbsp;&rarr;"
+msgstr "أقدم  &nbsp;&larr;"
+
+#: ../savoy/includes/translation-strings-dummy.php:84
+msgid "Oops, page not found."
+msgstr "عذرًا، الصفحة غير موجودة."
+
+#: ../savoy/includes/translation-strings-dummy.php:85
+msgid "Homepage &nbsp;&nbsp;&rarr;"
+msgstr "الصفحة الرئيسية &nbsp;&nbsp;&larr;"
+
+#: ../savoy/includes/custom-styles.php:1275
+msgid "Required field."
+msgstr "خانة مطلوبة."
+
+#. Name of the template
+msgid "Blank"
+msgstr ""
+
+#. Name of the template
+msgid "Full Width"
+msgstr ""
+
+#. Name of the template
+msgid "Sidebar"
+msgstr ""
+
+#: ../savoy/template-parts/blog/content-grid.php:53
+msgid "More"
+msgstr "المزيد"
+
+#: ../savoy/template-parts/blog/content-none.php:4
+#, php-format
+msgid "Ready to publish your first post? %sGet started here%s."
+msgstr "مستعد لنشر أول تدوينة؟ %sإبدأ هنا%s."
+
+#: ../savoy/template-parts/blog/content-none.php:8
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"عذرا، ولكن لا شيء يطابق عبارات البحث. أرجو المحاولة مرة أخرى بإستخدام كلمات "
+"أخرى."
+
+#: ../savoy/template-parts/blog/content-none.php:12
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+"يبدو أننا يمكن can&rsquo;t العثور على ما  you&rsquo;re  إعادة ما تبحث عنه."
+
+#: ../savoy/template-parts/blog/content-classic.php:47
+msgid "Leave a comment"
+msgstr "إضافة تعليق"
+
+#: ../savoy/template-parts/blog/content-classic.php:47
+msgid "1 comment"
+msgstr "1 تعليق"
+
+#: ../savoy/template-parts/blog/content-classic.php:47
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: ../savoy/template-parts/woocommerce/searchform.php:27
+msgid "Showing all results"
+msgstr "عرض جميع النتائج"
+
+#: ../savoy/includes/woocommerce/woocommerce-template-functions.php:240
+msgid "Back"
+msgstr "رجوع"
+
+#: ../savoy/includes/woocommerce/woocommerce-functions.php:181
+#, php-format
+msgid "%s products"
+msgstr "‫%s منتجات"
+
+#: ../savoy/includes/woocommerce/woocommerce-functions.php:229
+msgid "Tweet"
+msgstr ""
+
+#: ../savoy/includes/woocommerce/woocommerce-functions.php:230
+msgid "Pin it"
+msgstr ""
+
+#: ../savoy/includes/woocommerce/woocommerce-functions.php:231
+msgid "Download image"
+msgstr ""
+
+#: ../savoy/includes/woocommerce/woocommerce-functions.php:453
+msgid "Please fill in the required fields"
+msgstr "فضلًا قم بتعبئة الخانات المطلوبة"
+
+#: ../savoy/includes/visual-composer/page-templates.php:44
+msgid "About"
+msgstr "حول"
+
+#: ../savoy/includes/visual-composer/page-templates.php:51
+msgid "Contact"
+msgstr "اتصال"
+
+#: ../savoy/includes/visual-composer/page-templates.php:58
+msgid "FAQ"
+msgstr "التعليمات"
+
+#: ../savoy/includes/woocommerce/admin/admin-product-categories.php:30
+#: ../savoy/includes/woocommerce/admin/admin-product-categories.php:117
+msgid "Categories Grid Title"
+msgstr ""
+
+#: ../savoy/includes/woocommerce/admin/admin-product-categories.php:32
+#: ../savoy/includes/woocommerce/admin/admin-product-categories.php:120
+msgid "Enter a custom title to display in the \"Product Categories\" element."
+msgstr ""
+
+#: ../savoy/includes/visual-composer/element-templates/vc_toggle.php:6
+msgid "Click to toggle"
+msgstr "انقر للتبديل"
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:22
+#: ../savoy/includes/visual-composer/params/iconpicker.php:35
+#: ../savoy/includes/visual-composer/params/iconpicker.php:165
+#: ../savoy/includes/visual-composer/params/iconpicker.php:173
+msgid "close"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:23
+msgid "close circle"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:24
+#: ../savoy/includes/visual-composer/params/iconpicker.php:166
+msgid "angle up"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:25
+msgid "angle up circle"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:26
+#: ../savoy/includes/visual-composer/params/iconpicker.php:167
+msgid "angle right"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:27
+msgid "angle right circle"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:28
+#: ../savoy/includes/visual-composer/params/iconpicker.php:168
+msgid "angle left"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:29
+msgid "angle left circle"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:30
+#: ../savoy/includes/visual-composer/params/iconpicker.php:169
+msgid "angle down"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:31
+msgid "angle down circle"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:32
+#: ../savoy/includes/visual-composer/params/iconpicker.php:170
+msgid "wallet"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:33
+#: ../savoy/includes/visual-composer/params/iconpicker.php:171
+msgid "volume2"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:34
+#: ../savoy/includes/visual-composer/params/iconpicker.php:172
+msgid "volume1"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:36
+#: ../savoy/includes/visual-composer/params/iconpicker.php:174
+msgid "video"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:37
+#: ../savoy/includes/visual-composer/params/iconpicker.php:175
+msgid "user"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:38
+#: ../savoy/includes/visual-composer/params/iconpicker.php:176
+msgid "upload"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:39
+#: ../savoy/includes/visual-composer/params/iconpicker.php:177
+msgid "unlock"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:40
+#: ../savoy/includes/visual-composer/params/iconpicker.php:178
+msgid "umbrella"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:41
+#: ../savoy/includes/visual-composer/params/iconpicker.php:179
+msgid "trash"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:42
+#: ../savoy/includes/visual-composer/params/iconpicker.php:180
+msgid "tools"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:43
+#: ../savoy/includes/visual-composer/params/iconpicker.php:181
+msgid "timer"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:44
+#: ../savoy/includes/visual-composer/params/iconpicker.php:182
+msgid "ticket"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:45
+#: ../savoy/includes/visual-composer/params/iconpicker.php:183
+msgid "target"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:46
+#: ../savoy/includes/visual-composer/params/iconpicker.php:184
+msgid "sun"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:47
+#: ../savoy/includes/visual-composer/params/iconpicker.php:185
+msgid "study"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:48
+#: ../savoy/includes/visual-composer/params/iconpicker.php:186
+msgid "stopwatch"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:49
+#: ../savoy/includes/visual-composer/params/iconpicker.php:187
+msgid "star"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:50
+#: ../savoy/includes/visual-composer/params/iconpicker.php:188
+msgid "speaker"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:51
+#: ../savoy/includes/visual-composer/params/iconpicker.php:189
+msgid "signal"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:52
+#: ../savoy/includes/visual-composer/params/iconpicker.php:190
+msgid "shuffle"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:53
+#: ../savoy/includes/visual-composer/params/iconpicker.php:191
+msgid "shopbag"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:54
+#: ../savoy/includes/visual-composer/params/iconpicker.php:192
+msgid "share"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:55
+#: ../savoy/includes/visual-composer/params/iconpicker.php:193
+msgid "server"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:56
+#: ../savoy/includes/visual-composer/params/iconpicker.php:194
+msgid "search"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:57
+#: ../savoy/includes/visual-composer/params/iconpicker.php:195
+msgid "science"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:58
+#: ../savoy/includes/visual-composer/params/iconpicker.php:196
+msgid "ribbon"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:59
+#: ../savoy/includes/visual-composer/params/iconpicker.php:197
+msgid "repeat"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:60
+#: ../savoy/includes/visual-composer/params/iconpicker.php:198
+msgid "refresh"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:61
+#: ../savoy/includes/visual-composer/params/iconpicker.php:199
+msgid "refresh cloud"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:62
+#: ../savoy/includes/visual-composer/params/iconpicker.php:200
+msgid "radio"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:63
+#: ../savoy/includes/visual-composer/params/iconpicker.php:201
+msgid "print"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:64
+#: ../savoy/includes/visual-composer/params/iconpicker.php:202
+msgid "prev"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:65
+#: ../savoy/includes/visual-composer/params/iconpicker.php:203
+msgid "power"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:66
+#: ../savoy/includes/visual-composer/params/iconpicker.php:204
+msgid "portfolio"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:67
+#: ../savoy/includes/visual-composer/params/iconpicker.php:205
+msgid "plus"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:68
+#: ../savoy/includes/visual-composer/params/iconpicker.php:206
+msgid "play"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:69
+#: ../savoy/includes/visual-composer/params/iconpicker.php:207
+msgid "plane"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:70
+#: ../savoy/includes/visual-composer/params/iconpicker.php:208
+msgid "photo gallery"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:71
+#: ../savoy/includes/visual-composer/params/iconpicker.php:209
+msgid "phone"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:72
+#: ../savoy/includes/visual-composer/params/iconpicker.php:210
+msgid "pen"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:73
+#: ../savoy/includes/visual-composer/params/iconpicker.php:211
+msgid "paper plane"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:74
+#: ../savoy/includes/visual-composer/params/iconpicker.php:212
+msgid "paint"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:75
+#: ../savoy/includes/visual-composer/params/iconpicker.php:213
+msgid "piggy"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:76
+#: ../savoy/includes/visual-composer/params/iconpicker.php:214
+msgid "notebook"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:77
+#: ../savoy/includes/visual-composer/params/iconpicker.php:215
+msgid "note"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:78
+#: ../savoy/includes/visual-composer/params/iconpicker.php:216
+msgid "next"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:79
+#: ../savoy/includes/visual-composer/params/iconpicker.php:217
+msgid "news paper"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:80
+#: ../savoy/includes/visual-composer/params/iconpicker.php:218
+msgid "musiclist"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:81
+#: ../savoy/includes/visual-composer/params/iconpicker.php:219
+msgid "music"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:82
+#: ../savoy/includes/visual-composer/params/iconpicker.php:220
+msgid "mouse"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:83
+#: ../savoy/includes/visual-composer/params/iconpicker.php:221
+msgid "more"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:84
+#: ../savoy/includes/visual-composer/params/iconpicker.php:222
+msgid "moon"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:85
+#: ../savoy/includes/visual-composer/params/iconpicker.php:223
+msgid "monitor"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:86
+#: ../savoy/includes/visual-composer/params/iconpicker.php:224
+msgid "micro"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:87
+#: ../savoy/includes/visual-composer/params/iconpicker.php:225
+msgid "menu"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:88
+#: ../savoy/includes/visual-composer/params/iconpicker.php:226
+msgid "map"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:89
+#: ../savoy/includes/visual-composer/params/iconpicker.php:227
+msgid "map marker"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:90
+#: ../savoy/includes/visual-composer/params/iconpicker.php:228
+msgid "mail"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:91
+#: ../savoy/includes/visual-composer/params/iconpicker.php:229
+msgid "mail open"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:92
+#: ../savoy/includes/visual-composer/params/iconpicker.php:230
+msgid "mail open file"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:93
+#: ../savoy/includes/visual-composer/params/iconpicker.php:231
+msgid "magnet"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:94
+#: ../savoy/includes/visual-composer/params/iconpicker.php:232
+msgid "loop"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:95
+#: ../savoy/includes/visual-composer/params/iconpicker.php:233
+msgid "look"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:96
+#: ../savoy/includes/visual-composer/params/iconpicker.php:234
+msgid "lock"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:97
+#: ../savoy/includes/visual-composer/params/iconpicker.php:235
+msgid "lintern"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:98
+#: ../savoy/includes/visual-composer/params/iconpicker.php:236
+msgid "link"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:99
+#: ../savoy/includes/visual-composer/params/iconpicker.php:237
+msgid "like"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:100
+#: ../savoy/includes/visual-composer/params/iconpicker.php:238
+msgid "light"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:101
+#: ../savoy/includes/visual-composer/params/iconpicker.php:239
+msgid "less"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:102
+#: ../savoy/includes/visual-composer/params/iconpicker.php:240
+msgid "keypad"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:103
+#: ../savoy/includes/visual-composer/params/iconpicker.php:241
+msgid "junk"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:104
+#: ../savoy/includes/visual-composer/params/iconpicker.php:242
+msgid "info"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:105
+#: ../savoy/includes/visual-composer/params/iconpicker.php:243
+msgid "home"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:106
+#: ../savoy/includes/visual-composer/params/iconpicker.php:244
+msgid "help2"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:107
+#: ../savoy/includes/visual-composer/params/iconpicker.php:245
+msgid "help1"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:108
+#: ../savoy/includes/visual-composer/params/iconpicker.php:246
+msgid "graph3"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:109
+#: ../savoy/includes/visual-composer/params/iconpicker.php:247
+msgid "graph2"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:110
+#: ../savoy/includes/visual-composer/params/iconpicker.php:248
+msgid "graph1"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:111
+#: ../savoy/includes/visual-composer/params/iconpicker.php:249
+msgid "graph"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:112
+#: ../savoy/includes/visual-composer/params/iconpicker.php:250
+msgid "global"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:113
+#: ../savoy/includes/visual-composer/params/iconpicker.php:251
+msgid "gleam"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:114
+#: ../savoy/includes/visual-composer/params/iconpicker.php:252
+msgid "glasses"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:115
+#: ../savoy/includes/visual-composer/params/iconpicker.php:253
+msgid "gift"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:116
+#: ../savoy/includes/visual-composer/params/iconpicker.php:254
+msgid "folder"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:117
+#: ../savoy/includes/visual-composer/params/iconpicker.php:255
+msgid "flag"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:118
+#: ../savoy/includes/visual-composer/params/iconpicker.php:256
+msgid "filter"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:119
+#: ../savoy/includes/visual-composer/params/iconpicker.php:257
+msgid "file"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:120
+#: ../savoy/includes/visual-composer/params/iconpicker.php:258
+msgid "expand1"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:121
+msgid "exapnd2"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:122
+#: ../savoy/includes/visual-composer/params/iconpicker.php:259
+msgid "edit"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:123
+#: ../savoy/includes/visual-composer/params/iconpicker.php:260
+msgid "drop"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:124
+#: ../savoy/includes/visual-composer/params/iconpicker.php:261
+msgid "drawer"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:125
+#: ../savoy/includes/visual-composer/params/iconpicker.php:262
+msgid "download"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:126
+#: ../savoy/includes/visual-composer/params/iconpicker.php:263
+msgid "display2"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:127
+#: ../savoy/includes/visual-composer/params/iconpicker.php:264
+msgid "display1"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:128
+#: ../savoy/includes/visual-composer/params/iconpicker.php:265
+msgid "diskette"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:129
+#: ../savoy/includes/visual-composer/params/iconpicker.php:266
+msgid "date"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:130
+#: ../savoy/includes/visual-composer/params/iconpicker.php:267
+msgid "cup"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:131
+#: ../savoy/includes/visual-composer/params/iconpicker.php:268
+msgid "culture"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:132
+#: ../savoy/includes/visual-composer/params/iconpicker.php:269
+msgid "crop"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:133
+#: ../savoy/includes/visual-composer/params/iconpicker.php:270
+msgid "credit"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:134
+#: ../savoy/includes/visual-composer/params/iconpicker.php:271
+msgid "copy file"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:135
+#: ../savoy/includes/visual-composer/params/iconpicker.php:272
+msgid "config"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:136
+#: ../savoy/includes/visual-composer/params/iconpicker.php:273
+msgid "compass"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:137
+#: ../savoy/includes/visual-composer/params/iconpicker.php:274
+msgid "comment"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:138
+#: ../savoy/includes/visual-composer/params/iconpicker.php:275
+msgid "coffee"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:139
+#: ../savoy/includes/visual-composer/params/iconpicker.php:276
+msgid "cloud"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:140
+#: ../savoy/includes/visual-composer/params/iconpicker.php:277
+msgid "clock"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:141
+#: ../savoy/includes/visual-composer/params/iconpicker.php:278
+msgid "check"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:142
+#: ../savoy/includes/visual-composer/params/iconpicker.php:279
+msgid "chat"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:143
+#: ../savoy/includes/visual-composer/params/iconpicker.php:280
+msgid "cart"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:144
+#: ../savoy/includes/visual-composer/params/iconpicker.php:281
+msgid "camera"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:145
+#: ../savoy/includes/visual-composer/params/iconpicker.php:282
+msgid "call"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:146
+#: ../savoy/includes/visual-composer/params/iconpicker.php:283
+msgid "calculator"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:147
+#: ../savoy/includes/visual-composer/params/iconpicker.php:284
+msgid "browser"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:148
+msgid "box2"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:149
+#: ../savoy/includes/visual-composer/params/iconpicker.php:285
+msgid "box1"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:150
+#: ../savoy/includes/visual-composer/params/iconpicker.php:286
+msgid "bookmarks"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:151
+#: ../savoy/includes/visual-composer/params/iconpicker.php:287
+msgid "bicycle"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:152
+#: ../savoy/includes/visual-composer/params/iconpicker.php:288
+msgid "bell"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:153
+#: ../savoy/includes/visual-composer/params/iconpicker.php:289
+msgid "battery"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:154
+#: ../savoy/includes/visual-composer/params/iconpicker.php:290
+msgid "ball"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:155
+#: ../savoy/includes/visual-composer/params/iconpicker.php:291
+msgid "back"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:156
+#: ../savoy/includes/visual-composer/params/iconpicker.php:292
+msgid "attention"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:157
+#: ../savoy/includes/visual-composer/params/iconpicker.php:293
+msgid "anchor"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:158
+#: ../savoy/includes/visual-composer/params/iconpicker.php:294
+msgid "albums"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:159
+#: ../savoy/includes/visual-composer/params/iconpicker.php:295
+msgid "alarm"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:160
+#: ../savoy/includes/visual-composer/params/iconpicker.php:296
+msgid "airplay"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:161
+#: ../savoy/includes/visual-composer/params/iconpicker.php:297
+msgid "cloud upload"
+msgstr ""
+
+#: ../savoy/includes/visual-composer/params/iconpicker.php:162
+#: ../savoy/includes/visual-composer/params/iconpicker.php:298
+msgid "loud download"
+msgstr ""
+
+#. Name of the theme
+msgid "Savoy Child"
+msgstr ""
+
+#. Description of the theme
+msgid "Savoy child theme"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid ""
+"http://themeforest.net/item/savoy-minimalist-ajax-woocommerce-theme/12537825"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "NordicMade"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.nordicmade.com"
+msgstr ""
+
+msgid "Copied"
+msgstr "تم النسخ"
+
+msgid "Revealed"
+msgstr "تم الإظهار"
