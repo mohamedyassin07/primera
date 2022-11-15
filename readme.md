@@ -4,7 +4,7 @@ Tested up to: 6.0.3
 Requires PHP: 7.4
 Author URI: https://github.com/mohamedyassin07/
 Contributors: mhmdyassin07
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 
 Primera.app cutom plugin
 
@@ -27,5 +27,5 @@ Primera.app cutom plugin
 * بيتم ابلاغه انه تجاوز الحد الاقصي وبتكون قيمه الخصم هي القيمه القصوي للخم اللي تم تعريفها في لوحه التحكم
 * لوحه التحكم : woocommerce > settings >  primera tab
 
-= 1.4.0: November 14, 2022 =
+= 1.4.*: November 14, 2022 =
 * تحويل البلجن لثيم لتسهيل العمل علي الفرونت اند

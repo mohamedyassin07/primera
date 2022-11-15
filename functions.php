@@ -16,7 +16,7 @@ define( 'PRIMERA_THEME_FILE',	__FILE__ );
 define( 'PRIMERA_THEME_DIR',	get_stylesheet_directory(). '/' );
 
 // Theme Folder URL
-define( 'PRIMERA_THEME_URL',	get_stylesheet_directory_uri() );
+define( 'PRIMERA_THEME_URL',	get_stylesheet_directory_uri(). '/'  );
 
 // NM Theme version
 define( 'NM_THEME_VERSION_CHILD', '2.5.5' );
@@ -33,20 +33,15 @@ if ( ! defined( 'PRIMERA_DEBUG' ) ) {
 }
 
 /**
- * Load the main class for the core functionality
- */
-require_once PRIMERA_THEME_DIR . 'includes/class-primera.php';
-
-/**
- * The main function to load the only instance
- * of our master class.
+ * Load the main classes for the core functionality
  *
  * @author  Mohamed Yassin
  * @since   1.0.0
  * @return  object|Primera
  */
 function PRIMERA() {
-	return Primera::instance();
+    require_once PRIMERA_THEME_DIR . 'includes/functions/general.php';
+    require_once PRIMERA_THEME_DIR . 'includes/classes/class-primera-run.php';
 }
 
 PRIMERA();
