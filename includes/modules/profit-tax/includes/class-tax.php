@@ -87,10 +87,10 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
         
         public function change_cart_product_price($return_price, $qty, $product) {
             $info = array();
-            if($product->is_type('simple')){
+            if( $product->is_type('simple')){
                 $info['product_id'] = $product->get_id();
                 $info['variation_id'] = 0;
-            }elseif($product->is_type('variation') || $product->is_type('variation') ){
+            }elseif( $product->is_type('variation') || $product->is_type('variable')  ){
                 $info['product_id'] = $product->get_parent_id() ;
                 $info['variation_id'] = $product->get_id();
             }
@@ -109,6 +109,7 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
             $info['line_total'] = $line_price;
             
             $info['cent'] = 1;
+
             $info['custom_tax'] = $this->is_custom_tax($info['product_id'], $info['variation_id']);
 
             if ( $product->is_taxable() ) {
@@ -279,7 +280,6 @@ if (!class_exists('PRIMERA_Profit_Tax_Functionality')) {
             } else {
                 $taxes = $this->custom_calc_exclusive_tax($price, $rates, $info);
             }
-            // prr( $taxes );
             return $taxes;
         }
         

@@ -708,7 +708,7 @@ function pa_get_current_currency_amount_value($amount){
     if(function_exists('wcj_get_currency_exchange_rate') && function_exists('wcj_get_current_currency_code')){
         $exchange_rate = wcj_get_currency_exchange_rate('multicurrency', wcj_get_current_currency_code('multicurrency'));
 
-        return round(($amount * $exchange_rate), 2);
+        return round(( (int)$amount * (int)$exchange_rate), 2);
     }
     
     return $amount;

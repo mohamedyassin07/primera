@@ -42,6 +42,7 @@ if ( ! defined( 'PRIMERA_DEBUG' ) ) {
 function PRIMERA() {
     require_once PRIMERA_THEME_DIR . 'includes/functions/general.php';
     require_once PRIMERA_THEME_DIR . 'includes/classes/class-primera-run.php';
+    new Primera_Run();
 }
 
 PRIMERA();
