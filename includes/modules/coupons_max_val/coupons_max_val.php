@@ -85,13 +85,13 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
                 if( $current_coupon && $total_discount > (int) $max_discount ){
                     
                     // Create Our custom coupon   <===  <===  <===  <===  <===
-                    $primera_code = $this->creat_coupon( $max_discount );
+                    // $primera_code = $this->creat_coupon( $max_discount );
                     $pri_removed_coupons = [];
                     foreach ( $cart_obj->applied_coupons as $code ) {
-                        if( $cart_obj->has_discount( $code ) || (substr( $code, 0, 4 ) !== $prefix) ) {
+                        if( $cart_obj->has_discount( $code ) || ( substr( $code, 0, 4 ) !== $prefix) ) {
                             // Remove Current coupon   <===  <===  <===  <===  <===
-                             $cart_obj->remove_coupon( $code );
-                             $pri_removed_coupons[] = $code;
+                                $cart_obj->remove_coupon( $code );
+                                $pri_removed_coupons[] = $code;
                              
                         }
                     }
@@ -100,30 +100,34 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
                     $user_id = get_current_user_id();
                     update_user_meta( $user_id, 'primera-remove-coupons', $pri_removed_coupons );
 
+                    // <===  <===  <===  <===  <===
                     // Checking that the coupon_max_discount is not already set.<===  <===  <===  <===
-                    if( !$cart_obj->has_discount( $primera_code ) && (substr( $current_coupon, 0, 4 ) !== $prefix) ){
-                        // prr( substr( $current_coupon, 0, 4 ) !== $prefix );
+                    // removed for bug .
+                    // if( !$cart_obj->has_discount( $primera_code ) && (substr( $current_coupon, 0, 4 ) !== $prefix) ){
+                    //     // prr( substr( $current_coupon, 0, 4 ) !== $prefix );
                         
-                        // Add the 'coupon_max_discount' coupon <===  <===  <===  <===
-                        $cart_obj->apply_coupon( $primera_code );
+                    //     // Add the 'coupon_max_discount' coupon <===  <===  <===  <===
+                    //     $cart_obj->apply_coupon( $primera_code );
+                    // }
+                    // <===  <===  <===  <===  <===
 
-                        // Displaying a custom message <===  <===  <===  <===
-                        $max_discount_message = get_option( 'primera_cpoupon_max_discount_message', true );
-                        if( !empty ( $max_discount_message ) ){
-                            $placeholders = array(
-                                '[max]' => $max_discount,
-                            );
-                            
-                            foreach ( $placeholders as $placeholder => $placeholder_value ) {
-                                $discount_message = str_replace( $placeholder , $placeholder_value , $max_discount_message );
-                            }
-               
-                            if( !wc_has_notice( $discount_message, $notice_type = 'error', $data = array() ) ){
-                                wc_add_notice( $discount_message, $notice_type = 'error', $data = array() );
-                            }
-                            
+                    // Displaying a custom message <===  <===  <===  <===
+                    $max_discount_message = get_option( 'primera_cpoupon_max_discount_message', true );
+                    if( !empty ( $max_discount_message ) ){
+                        $placeholders = array(
+                            '[max]' => $max_discount,
+                        );
+                        
+                        foreach ( $placeholders as $placeholder => $placeholder_value ) {
+                            $discount_message = str_replace( $placeholder , $placeholder_value , $max_discount_message );
                         }
+            
+                        if( !wc_has_notice( $discount_message, $notice_type = 'error', $data = array() ) ){
+                            wc_add_notice( $discount_message, $notice_type = 'error', $data = array() );
+                        }
+                        
                     }
+
                 } 
             }
 
