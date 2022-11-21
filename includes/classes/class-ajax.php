@@ -12,13 +12,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * 
  * 
  * HOW TO USE ??
- * <?php require_once PRIMERA_THEME_DIR . 'includes/classes/class-ajax.php'; ?>
- * <form id='{action_name}_form'>
- *      do your normal field/s here,  all of them will be send throug the ajax request automatically
- *      <?php Primera_ِAjax::render( '{action_name}' ); ?> it will create submit btn and response div
- * </form>
+ * - in the frontend page 
+ * require_once PRIMERA_THEME_DIR . 'includes/classes/class-ajax.php';
+ * Primera_ِAjax::render_form_start( $action );
+ * do your normal field/s here,  all of them will be send throug the ajax request automatically
+ * Primera_ِAjax::render_form_end( $action );
  * 
- * 
+ * - in the backend 
+ * $data[ 'steps' ][ 0 ][ 'total' ] =  (int)$wpdb->get_row( $step_1_query, ARRAY_A )['COUNT(*)'];
+ * $data[ 'steps' ][ 0 ][ 'title' ] = $step_1_title;
+ * $data[ 'steps' ][ 0 ][ 'done' ] = 0;
+ * $data[ 'request_status' ] = 'working';
+ * wp_send_json_success( $data );
  *
  * @package		PRIMERA
  * @subpackage	Classes/Primera_ِAjax
@@ -32,16 +37,22 @@ class Primera_ِAjax
         return trim( urlencode( $action ) );
     }
 
-    static public function render( $action, $tag = 'submit' )
-    {
-        $action = self::action( $action );
-        echo self::clicked_item( $action, $tag );
-        echo self::response_div( $action );
+    static public function render_form_start( $action, $submit = 'submit' ){
+        echo  "<form id='{$action}_form'>";
     }
 
-    static public function clicked_item( $action, $tag )
+    static public function render_form_end( $action, $submit = 'submit' )
+    {
+        $action = self::action( $action );
+        wp_nonce_field( $action, $action.'_nonce_field' );
+        echo self::clicked_item( $action, $submit );
+        echo self::response_div( $action );
+        echo "</form>";
+    }
+
+    static public function clicked_item( $action, $submit )
     {    
-        return '<input type="submit" class="primera-ajax-btn" value="submit" data-action="' . $action . '">';
+        return '<input type="submit" class="primera-ajax-btn" value="'.$submit.'" data-action="' . $action . '">';
     }
 
     static public function response_div( $action )

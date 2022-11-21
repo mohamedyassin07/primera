@@ -30,8 +30,9 @@ Backend related javascript 2
 					// alert( data.action );
 				},
 				success: function( response ) {
+					primera_ajax_render_status( response.data );						
+
 					if( response.data.request_status === 'working' ){
-						primera_ajax_render_status( response.data );						
 						create_primera_ajax_request( response.data );
 					}else{
 						// alert( 'this request is :  ' + response.data.request_status );
