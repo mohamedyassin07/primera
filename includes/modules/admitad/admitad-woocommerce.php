@@ -111,7 +111,7 @@ function primera_hook_product_category_javascript() {
             $order    = wc_get_order( $order_id ); // The WC_Order object
         }
         $ad_order = $order->get_id();
-        $ad_amount = $order->total;
+        $ad_amount = $order->get_total();
         $ad_product = [];
         foreach( $order->get_items() as $item_id => $item ) {
             $ad_product[] = [
@@ -125,12 +125,7 @@ function primera_hook_product_category_javascript() {
         <script type="text/javascript">
             window.ad_order    = <?php echo $ad_order; ?>;    // required
             window.ad_amount   = <?php echo $ad_amount; ?>;
-            window.ad_products = <?php echo $ad_product; ?>;
-
-            console.log(window.ad_products);
-            console.log(window.ad_order );
-            console.log(window.ad_amount);
-            
+            window.ad_products = <?php echo $ad_product; ?>;            
             window._retag = window._retag || [];
             window._retag.push({code: "9ce8884f0b", level: 4});
             (function () {
