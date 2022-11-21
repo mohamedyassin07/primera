@@ -42,11 +42,67 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
             add_filter( 'woocommerce_settings_tabs_array', __CLASS__ . '::add_settings_tab', 50 );
             add_action( 'woocommerce_settings_tabs_primera_woo', array( $this, 'settings_tab') );
             add_action( 'woocommerce_update_options_primera_woo', array( $this, 'update_settings' ) );
-            add_action( 'woocommerce_removed_coupon', array($this, 'remove_coupon_cart'),10,1 );
-    
+           // add_action( 'woocommerce_removed_coupon', array($this, 'remove_coupon_cart'),10,1 );
+            add_filter( 'woocommerce_coupon_message', array($this,'filter_woocommerce_coupon_message'), 10, 3 );
+
         }
 
         public function include_files() {}
+     
+        function filter_woocommerce_coupon_message( $msg, $msg_code, $coupon ) {
+
+            $applied_coupons = WC()->cart->get_applied_coupons(); // Get applied coupons
+            // Set HERE the limit amount  <===  <===  <===  <===  <===  <===  <===  <===  <===  <===
+            $max_discount  = get_option( 'primera_max_discount', true );
+            $cart_total = WC()->cart->total;
+            $coupon_amount = [];
+            foreach(  $applied_coupons as $code ){
+
+                // var_dump($coupon->get_discount_type());
+                // Get the WC_Coupon object
+                $coupon = new WC_Coupon($code);
+                $discount_type = $coupon->get_discount_type(); // Get coupon discount type
+                if( 'percent' === $discount_type ) {
+                    $coupon_amount[] = ( $coupon->get_amount() * $cart_total ) / 100 ;  // Get coupon amount
+                }
+                if( 'fixed_cart' === $discount_type ){
+                    $coupon_amount[] = $coupon->get_amount(); // Get coupon amount
+                }
+                
+            }
+       
+            $total_discount = array_sum( $coupon_amount );
+            
+            if( $total_discount > (int) $max_discount ){
+            
+                if( $msg === __( 'Coupon code applied successfully.', 'woocommerce' ) ) {
+                    // $remove_message = get_option( 'primera_cpoupon_remove', true );
+                    // if( !empty ( $remove_message ) && is_string($remove_message) ){
+                    //     $placeholders = array(
+                    //         '[code]' => $coupon->get_code(),
+                    //     );
+                        
+                    //     foreach ( $placeholders as $placeholder => $placeholder_value ) {
+                    //         $message = str_replace( $placeholder , $placeholder_value , $remove_message );
+                    //     }
+                        
+                    //     if( !wc_has_notice( $message, $notice_type = 'error', $data = array() ) ){
+                    //         $msg = wc_add_notice( $message, $notice_type = 'error', $data = array() );
+                    //     }
+                        
+                    // }else {
+                    //     $msg = sprintf( 
+                    //         __( "The %s Coupon code has Been Removed Try Another One", "woocommerce" ), 
+                    //         '<strong>' . $coupon->get_code() . '</strong>' 
+                    //     );
+                    //     $msg = wc_add_notice( $msg, $notice_type = 'error', $data = array() );
+                    // }
+                    $msg = "";
+                    
+                }
+            }
+            return $msg;
+        }
 
         public function coupon_discount_max_switch( $cart_obj ) {
 
@@ -57,11 +113,11 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
             if ( did_action( 'woocommerce_before_calculate_totals' ) >= 2 ){
                 return;
             }
-               
+                
             if ( $cart_obj->get_applied_coupons()  == False ){
                 return;
             }
-              
+                
             // Set HERE the limit amount  <===  <===  <===  <===  <===  <===  <===  <===  <===  <===
             $max_discount  = get_option( 'primera_max_discount', true );
             // $coupon_max_discount = get_option( 'primera_coupon_max_discount', true );
@@ -75,14 +131,16 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
                     $current_coupon = true;
                 }
             }
-           
+            
             $total_discount = array_sum( $cart_obj->coupon_discount_totals ); // Total cart discount
 
-            // prr( $cart_obj );
+            // print_r($cart_obj);
 
             if( 'yes' === $pri_coupon_max_discount_enable ){
                 // When 'coupon_max_discount' is set and the total discount is reached
                 if( $current_coupon && $total_discount > (int) $max_discount ){
+
+                   
                     
                     // Create Our custom coupon   <===  <===  <===  <===  <===
                     // $primera_code = $this->creat_coupon( $max_discount );
@@ -92,14 +150,14 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
                             // Remove Current coupon   <===  <===  <===  <===  <===
                                 $cart_obj->remove_coupon( $code );
                                 $pri_removed_coupons[] = $code;
-                             
+                               
                         }
                     }
 
                     // Store Our Removed Coupons   <===  <===  <===  <===  <===
                     $user_id = get_current_user_id();
                     update_user_meta( $user_id, 'primera-remove-coupons', $pri_removed_coupons );
-
+    
                     // <===  <===  <===  <===  <===
                     // Checking that the coupon_max_discount is not already set.<===  <===  <===  <===
                     // removed for bug .
@@ -111,6 +169,7 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
                     // }
                     // <===  <===  <===  <===  <===
 
+
                     // Displaying a custom message <===  <===  <===  <===
                     $max_discount_message = get_option( 'primera_cpoupon_max_discount_message', true );
                     if( !empty ( $max_discount_message ) ){
@@ -121,7 +180,7 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
                         foreach ( $placeholders as $placeholder => $placeholder_value ) {
                             $discount_message = str_replace( $placeholder , $placeholder_value , $max_discount_message );
                         }
-            
+                        
                         if( !wc_has_notice( $discount_message, $notice_type = 'error', $data = array() ) ){
                             wc_add_notice( $discount_message, $notice_type = 'error', $data = array() );
                         }
@@ -132,7 +191,7 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
             }
 
             // return $cart_obj;
-        } 
+        }  
 
         /**
          * mybe_creat_coupon
@@ -286,6 +345,12 @@ if (!class_exists('Primera_Coupons_Max_Val')) {
                     'desc' => __( 'Replace Coupons code With Custom Text Placeholder for max number is [max]', 'primera' ),
                     'id'   => 'primera_cpoupon_max_discount_message'
                 ),
+                // 'coupon_remove_notes' => array(
+                //     'name' => __( 'Coupons Remove Max Discount Amount Massege', 'primera' ),
+                //     'type' => 'text',
+                //     'desc' => __( 'The [code] Coupon code has Been Removed Try Another One', 'primera' ),
+                //     'id'   => 'primera_cpoupon_remove'
+                // ),
                 'section_end' => array(
                      'type' => 'sectionend',
                      'id' => 'wc_settings_tab_demo_section_end'
