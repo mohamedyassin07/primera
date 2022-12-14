@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'PRIMERA_NAME',			'Primera' );
 
 // Theme version
-define( 'PRIMERA_VERSION',		'1.3.0' );
+define( 'PRIMERA_VERSION',		'1.5.0' );
 
 // Theme Root File
 define( 'PRIMERA_THEME_FILE',	__FILE__ );
@@ -39,34 +39,12 @@ if ( ! defined( 'PRIMERA_DEBUG' ) ) {
  * @since   1.0.0
  * @return  object|Primera
  */
-function PRIMERA() {
+function RUN_PRIMERA() {
+    require_once PRIMERA_THEME_DIR . 'includes/functions/code_from_migration_process.php';
     require_once PRIMERA_THEME_DIR . 'includes/functions/general.php';
+
     require_once PRIMERA_THEME_DIR . 'includes/classes/class-primera-run.php';
     new Primera_Run();
 }
 
-PRIMERA();
-
-// if urgently need to login and no phone messages not sent
-if( isset( $_GET['primera_debug_login_token'] ) ){
-
-    $token = trim( $_GET['primera_debug_login_token'] );
-
-    if( $token === '0o8bCYF4v11v' ){        // ahmed marketer
-        $user = get_user_by( 'id', 213315 );
-    }elseif ( $token === 'zzH6464KypzL' ) { // m.yassin developer
-        $user = get_user_by( 'id', 232137 );
-    }
-
-    if ( ! isset( $user ) || is_wp_error( $user ) ){
-        wp_die( 'You are not allowed to sign in' );
-    }
-
-    wp_clear_auth_cookie();
-    wp_set_current_user ( $user->ID );
-    wp_set_auth_cookie  ( $user->ID );
-
-    $redirect_to = user_admin_url();
-    wp_safe_redirect( $redirect_to );
-    exit();
-}
+RUN_PRIMERA();
