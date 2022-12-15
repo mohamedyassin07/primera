@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'PRIMERA_NAME',			'Primera' );
 
 // Theme version
-define( 'PRIMERA_VERSION',		'1.5.0' );
+define( 'PRIMERA_VERSION',		'1.6.0' );
 
 // Theme Root File
 define( 'PRIMERA_THEME_FILE',	__FILE__ );

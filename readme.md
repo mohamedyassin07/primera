@@ -1,21 +1,18 @@
 === Primera ===
+
 Requires at least: 6.0
 Tested up to: 6.0.3
 Requires PHP: 7.4
 Author URI: https://github.com/mohamedyassin07/
 Contributors: mhmdyassin07
-Stable tag: 1.4.1
+Stable tag: 1.5.0
 
-Primera.app cutom plugin
-
-== Description ==
-
-Primera.app cutom plugin
+# Primera cutom ~~Plugin~~Theme
 
 == Changelog ==
 
 = 1.0.0: September 21, 2022 =
-* Birthday of Primera
+* Birthday of Primera Plugin
 
 = 1.2.0: November 10, 2022 =
 * الربط مع admitad
@@ -29,3 +26,13 @@ Primera.app cutom plugin
 
 = 1.4.*: November 14, 2022 =
 * تحويل البلجن لثيم لتسهيل العمل علي الفرونت اند
+
+= 1.5.0: Dec 14, 2022 =
+* نقل التعديلات التي قام بها المبرمجين السابقين في الثيم الاصلي الي هذا ال child theme 
+* الدمج مع خاصه woocommerce HPOS
+
+= 1.6.0: Dec 15, 2022 =
+* التوافق مع النسخه الاحدث من الثيم 2.7.5
+* تم ازاله كل قوالب الووكوميرس المستدعاه في ال child theme التي تم التاكد من عدم وجود اهميه لها لجعل الثيم يعمل من خلال ملفا سافوي المحدثه وبالتالي في التحديثات الجديده سيكون دايما تلك الملفات محدثه مع الثيم
+* يتبقي 3 ملفات لم استطع التاكد من الاختلافات فيها هل هي تبع الثيم ام تعديلات قام بها مبرميجن سابقين 
+* يجب مستقبلا مراجعه تلك الملفات مع نسخ سافوي القديمه ما وجدته ان المبرمجين السابقين تعاملوا مع نسخ 2.7.1 , 2.6.0 وبالتالي غالبا نحتاج الي مراجعه تلك الملفات من تلك النسخ
